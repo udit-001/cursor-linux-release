@@ -24,5 +24,5 @@ This GitHub Action bridges the gap by:
 - If not, downloads the AppImage and creates a new release
 
 ## 📅 Release Status:
-- **⏳ Last Released On**: 2025-05-03 23:30:55 UTC
-- **🔄 Last Run**: 2025-05-03 23:34:09 UTC
+- **⏳ Last Released On**: 2025-05-03 23:51:33 UTC
+- **🔄 Last Run**: 2025-05-03 23:51:33 UTC
