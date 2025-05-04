@@ -97,6 +97,6 @@ jobs:
             echo "README unchanged, skipping commit."
           else
             git add README.md
-            git commit -m "chore: update README with last run and last released on timestamps"
+            git commit -m "📝 Update timestamps in README [workflow]"
             git push
           fi
