@@ -48,7 +48,7 @@ jobs:
 
       - name: Create GitHub Release
         if: steps.check-release.outputs.exists == 'false'
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.fetch-cursor.outputs.x64_version }}
           name: Cursor ${{ steps.fetch-cursor.outputs.x64_version }}
