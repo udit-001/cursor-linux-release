@@ -30,7 +30,8 @@ To automate updates for your Cursor AppImage on Linux, use [Gear Lever](https://
   https://github.com/udit-001/cursor-linux-release/releases/download/*/Cursor-*-aarch64.AppImage
   ```
 
-By setting these URLs, Gear Lever will automatically fetch the latest releases. For more detailed instructions, check out the [Gear Lever update guide](https://mijorus.it/posts/gearlever/update-url-info/).
+
+These URLs will allow automatic fetching of the latest releases. For more detailed instructions, refer to the [update guide](https://mijorus.it/posts/gearlever/update-url-info/).
 
 
 ## 📅 Release Status:
