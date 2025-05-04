@@ -50,9 +50,9 @@ jobs:
         if: steps.check-release.outputs.exists == 'false'
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ steps.fetch-cursor.outputs.version }}
-          name: Cursor ${{ steps.fetch-cursor.outputs.version }}
-          body: "Automated release of Cursor ${{ steps.fetch-cursor.outputs.version }} for Linux x64"
+          tag_name: v${{ steps.fetch-cursor.outputs.x64_version }}
+          name: Cursor ${{ steps.fetch-cursor.outputs.x64_version }}
+          body: "Automated release of Cursor ${{ steps.fetch-cursor.outputs.x64_version }} for Linux x64 and aarch64"
           files: |
             Cursor-${{ steps.fetch-cursor.outputs.x64_version }}-x86_64.AppImage
             Cursor-${{ steps.fetch-cursor.outputs.arm64_version }}-aarch64.AppImage
