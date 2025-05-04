@@ -17,9 +17,13 @@ jobs:
       - name: Fetch Cursor version info
         id: fetch-cursor
         run: |
-          response=$(curl -s "https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=stable")
-          echo "version=$(echo $response | jq -r '.version')" >> $GITHUB_OUTPUT
-          echo "download_url=$(echo $response | jq -r '.downloadUrl')" >> $GITHUB_OUTPUT
+          x64_response=$(curl -s "https://www.cursor.com/api/download?platform=linux-x64&releaseTrack=stable")
+          echo "x64_version=$(echo $x64_response | jq -r '.version')" >> $GITHUB_OUTPUT
+          echo "x64_download_url=$(echo $x64_response | jq -r '.downloadUrl')" >> $GITHUB_OUTPUT
+
+          arm64_response=$(curl -s "https://www.cursor.com/api/download?platform=linux-arm64&releaseTrack=stable")
+          echo "arm64_version=$(echo $arm64_response | jq -r '.version')" >> $GITHUB_OUTPUT
+          echo "arm64_download_url=$(echo $arm64_response | jq -r '.downloadUrl')" >> $GITHUB_OUTPUT
 
       - name: Check if version already exists
         id: check-release
@@ -36,8 +40,11 @@ jobs:
       - name: Download Cursor AppImage
         if: steps.check-release.outputs.exists == 'false'
         run: |
-          curl -L -o Cursor-${{ steps.fetch-cursor.outputs.version }}-x86_64.AppImage "${{ steps.fetch-cursor.outputs.download_url }}"
-          chmod +x Cursor-${{ steps.fetch-cursor.outputs.version }}-x86_64.AppImage
+          curl -L -o Cursor-${{ steps.fetch-cursor.outputs.x64_version }}-x86_64.AppImage "${{ steps.fetch-cursor.outputs.x64_download_url }}"
+          chmod +x Cursor-${{ steps.fetch-cursor.outputs.x64_version }}-x86_64.AppImage
+
+          curl -L -o Cursor-${{ steps.fetch-cursor.outputs.arm64_version }}-aarch64.AppImage "${{ steps.fetch-cursor.outputs.arm64_download_url }}"
+          chmod +x Cursor-${{ steps.fetch-cursor.outputs.arm64_version }}-aarch64.AppImage
 
       - name: Create GitHub Release
         if: steps.check-release.outputs.exists == 'false'
@@ -47,7 +54,8 @@ jobs:
           name: Cursor ${{ steps.fetch-cursor.outputs.version }}
           body: "Automated release of Cursor ${{ steps.fetch-cursor.outputs.version }} for Linux x64"
           files: |
-            Cursor-${{ steps.fetch-cursor.outputs.version }}-x86_64.AppImage
+            Cursor-${{ steps.fetch-cursor.outputs.x64_version }}-x86_64.AppImage
+            Cursor-${{ steps.fetch-cursor.outputs.arm64_version }}-aarch64.AppImage
 
 
       - name: Set last release and run timestamps
