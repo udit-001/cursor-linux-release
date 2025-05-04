@@ -20,5 +20,5 @@ This action solves that by:
 Linux users can then update via GitHub releases, scripts, or package managers using a consistent URL.
 
 ## 📅 Release Status:
-- **⏳ Last Released On**: 2025-05-03 23:51:33 UTC
-- **🔄 Last Run**: 2025-05-03 23:51:33 UTC
+- **⏳ Last Released On**: 2025-05-04 00:06:32 UTC
+- **🔄 Last Run**: 2025-05-04 00:06:32 UTC
