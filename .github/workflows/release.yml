@@ -37,12 +37,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download Cursor AppImage
+      - name: Download Cursor AppImage for x64
         if: steps.check-release.outputs.exists == 'false'
         run: |
           curl -L -o Cursor-${{ steps.fetch-cursor.outputs.x64_version }}-x86_64.AppImage "${{ steps.fetch-cursor.outputs.x64_download_url }}"
           chmod +x Cursor-${{ steps.fetch-cursor.outputs.x64_version }}-x86_64.AppImage
 
+      - name: Download Cursor AppImage for arm64
+        if: steps.check-release.outputs.exists == 'false'
+        run: |
           curl -L -o Cursor-${{ steps.fetch-cursor.outputs.arm64_version }}-aarch64.AppImage "${{ steps.fetch-cursor.outputs.arm64_download_url }}"
           chmod +x Cursor-${{ steps.fetch-cursor.outputs.arm64_version }}-aarch64.AppImage
 
