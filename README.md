@@ -9,10 +9,7 @@ Cursor on Linux:
 - ❌ Isn’t hosted at a fixed URL  
 - ✅ Has an API with the latest version info
 
-This makes it hard for Linux users to keep Cursor up to date.
-
-This action solves that by:
-
+This makes it hard for Linux users to keep Cursor up to date & this action solves that by:
 - Querying Cursor’s API for the latest version
 - Checking if that version already exists as a GitHub release
 - If not, downloading the AppImage and publishing a release
