@@ -81,10 +81,10 @@ jobs:
       - name: Update README with timestamps
         run: |
           # Remove any old status info
-          sed -i '/^## 📅 Release Status:/,/^$/d' README.md
+          sed -i '/^## 📅 Release Status/,/^$/d' README.md
 
           # Add the updated status info
-          echo -e "## 📅 Release Status:" >> README.md
+          echo -e "## 📅 Release Status" >> README.md
           echo -e "- **⏳ Last Released On**: ${{ env.last_release }}" >> README.md
           echo -e "- **🔄 Last Run**: ${{ env.last_run }}" >> README.md
 
