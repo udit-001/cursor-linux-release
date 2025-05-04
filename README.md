@@ -16,7 +16,7 @@ This makes it hard for Linux users to keep Cursor up to date & this action solve
 
 Linux users can then update via GitHub releases, scripts, or package managers using a consistent URL.
 
-### Setup Auto Updates with Gear Lever
+## Setup Auto Updates with Gear Lever
 
 To streamline updates for your Cursor AppImage on Linux, you can use [Gear Lever](https://github.com/mijorus/gearlever), an AppImage manager.
 
