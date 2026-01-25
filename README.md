@@ -44,7 +44,7 @@ To automate updates for your Cursor AppImage on Linux, use [Gear Lever](https://
 5. Configure other settings as needed (e.g., toggle "Allow pre-releases" if desired)
 6. Click **Save** to apply the configuration
 
-![Gear Lever Update Configuration](assets/gearlever-update-config.png)
+![Gear Lever Update Configuration](assets/gearlever-update-config-ikidd.png)
 
 ### Alternative: Direct Update URLs
 
