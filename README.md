@@ -5,9 +5,9 @@
 
 
 <p align="center">
-  <a href="https://github.com/udit-001/cursor-linux-release/releases/latest" target="_blank"><img alt="release" src="https://img.shields.io/github/v/release/udit-001/cursor-linux-release?label=release&labelColor=%231e1e2e&color=%234fa048"></a>
+  <a href="https://github.com/ikidd/cursor-linux-release/releases/latest" target="_blank"><img alt="release" src="https://img.shields.io/github/v/release/udit-001/cursor-linux-release?label=release&labelColor=%231e1e2e&color=%234fa048"></a>
   <span> </span>
-  <a href="https://github.com/udit-001/cursor-linux-release/actions/workflows/release.yml" target="_blank"><img alt="downloads" src="https://img.shields.io/github/actions/workflow/status/udit-001/cursor-linux-release/release.yml?branch=main&labelColor=%231e1e2e&color=%234fa048"></a>
+  <a href="https://github.com/ikidd/cursor-linux-release/actions/workflows/release.yml" target="_blank"><img alt="downloads" src="https://img.shields.io/github/actions/workflow/status/udit-001/cursor-linux-release/release.yml?branch=main&labelColor=%231e1e2e&color=%234fa048"></a>
   <span> </span>
 </p>
 
@@ -37,7 +37,7 @@ To automate updates for your Cursor AppImage on Linux, use [Gear Lever](https://
 
 1. Open Gear Lever and navigate to **Update management**
 2. Select **Github** as the source type
-3. Enter the repository URL: `https://github.com/udit-001/cursor-linux-release`
+3. Enter the repository URL: `https://github.com/ikidd/cursor-linux-release`
 4. Set the release file name based on your system architecture:
    - **x86_64**: `Cursor-*-x86_64.AppImage`
    - **ARM64**: `Cursor-*-aarch64.AppImage`
@@ -52,12 +52,12 @@ You can also configure Gear Lever using direct update URLs:
 
 - **x86_64**
   ```
-  https://github.com/udit-001/cursor-linux-release/releases/download/*/Cursor-*-x86_64.AppImage
+  https://github.com/ikidd/cursor-linux-release/releases/download/*/Cursor-*-x86_64.AppImage
   ```
 
 - **ARM64**
   ```
-  https://github.com/udit-001/cursor-linux-release/releases/download/*/Cursor-*-aarch64.AppImage
+  https://github.com/ikidd/cursor-linux-release/releases/download/*/Cursor-*-aarch64.AppImage
   ```
 
 These URLs will allow automatic fetching of the latest releases. For more detailed instructions, refer to the [update guide](https://mijorus.it/posts/gearlever/update-url-info/).
